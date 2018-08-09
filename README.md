@@ -12,3 +12,27 @@ see all available arguments.
 The current version is not yet pushed to Docker Hub and does not yet register
 the VM's it finds. It currently just reports on them.
 
+## Usage
+
+```
+$ docker run --rm vmware-orphanage
+usage: getorphanedvms.py [-h] -s HOST [-o PORT] -u USER -p PASSWORD
+                         --datacenter DATACENTER --datastore DATASTORE
+                         [--days DAYS]
+
+Process args for retrieving all the Virtual Machines
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s HOST, --host HOST  Remote host to connect to
+  -o PORT, --port PORT  Port to connect on
+  -u USER, --user USER  User name to use when connecting to host
+  -p PASSWORD, --password PASSWORD
+                        Password to use when connecting to host
+  --datacenter DATACENTER
+                        The datacenter to interact with
+  --datastore DATASTORE
+                        The datastore to search
+  --days DAYS           VM's with activity in their log more recent than X
+                        days will be ignored.
+```
